@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="CS" label="Request Type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Human Resource" sequence="0" value="hr"/>
+                <element label="Corporate Services" sequence="1" value="CS"/>
+                <element label="Admin" sequence="2" value="Admin"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="cs1" label="What Needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Human Resource 1" sequence="0" value="hr1"/>
+                <element label="Human Resource 2" sequence="1" value="hr2"/>
+                <element label="Corporate Services 1" sequence="2" value="cs1"/>
+                <element label="Corporate Services 2" sequence="3" value="cs2"/>
+                <element label="Admin 1" sequence="4" value="Admin1"/>
+                <element label="Admin 2" sequence="5" value="Admin2"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
